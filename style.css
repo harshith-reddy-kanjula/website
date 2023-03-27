@@ -1,0 +1,202 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Hammersmith One', sans-serif;
+}
+a{
+    margin-top: 0px;
+}
+html{
+    background-image: url('pictures/MKT_081419_DRONEKENNESAW_RCW_3.JPG');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:100vw 100vh;
+    background-color: rgba(255, 255, 255, 0.7);
+    background-blend-mode: overlay;
+    position: relative;
+    margin: 0px;
+    min-height: 100vh;
+}
+.header {
+    min-height: 100vh;
+    width: 100%;
+} 
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -5px;
+}
+nav img{
+    width: 300px;
+}
+.nav_links{
+    flex: 1;
+    text-align: right;
+}
+.nav_links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav_links ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: 20px;   
+}
+.nav_links ul li ::after{
+    content: ""; 
+    width: 0;
+    height: 2px;
+    background: black;
+    display: block;
+    margin: auto;     
+    transition: 0.5s;  
+}
+.null-margin{
+    margin-top: -1.75em;
+}
+.nav_links ul li :hover::after{
+    width: 100%;
+}
+.textbox{
+    width: 90%;
+    color: black;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin-top: 100px;
+}
+.textbox h1{
+    font-size: 50px;
+    margin-top: 0px;
+}
+.textbox p{
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: black;
+}
+.footer p{
+    list-style: none;
+    display: inline-block;
+    padding: 8px;
+    position: fixed;  
+    font-size: 13px;
+    bottom: 0px;
+    width: 100%;
+    color: black;
+}
+.footer p a{
+    color: black;
+    text-decoration: none;
+    font-size: 13px; 
+    padding: 8px;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}
+.faculty{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    margin-top: 0px;
+}
+.list h3{
+    text-align: center;
+    margin-top: 30px;
+    color: black;
+    font-size: 20px;
+    margin-bottom: 10px;
+    padding-top: 150px;
+}
+
+.list li{
+    list-style: none;
+    text-align: center;
+    color: black;
+    margin-bottom: 5px;
+}
+.wrapper{
+    margin-top: 0%;
+    margin-bottom: 30px;
+}
+
+.wrapper h1{
+    font-size: 40px;
+    text-align: center;
+    padding-bottom: 20px;
+
+}
+
+.team{
+    display: flex;
+    text-align: center;
+    width: auto;
+    justify-content: center;
+   
+}
+
+.team .team_member{
+    background-color: transparent;
+    margin: 40px;
+    margin-bottom: 20px;
+    width: 400px;
+    padding: 10px;
+    line-height: 20px;
+    color: Black;
+    position: relative;
+}
+.team .team_member h3{
+    margin-top: 50px;
+}
+
+.team .team_member .image{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.team .team_member .image img{
+    width: 100px;
+    height: 100px;
+
+}
+.about h1{
+    font-size: 40px;
+    text-align: left;
+    padding: 20px;
+    color: black;
+}
+
+.about p{
+    margin: 10px 20px 40px, 20px;
+    font-size: 14px;
+    color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 40px;
+    padding-top: 5px;
+}
+.links h3{
+    font-size: 20px;
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    color: black;
+}
+
+.table, th, td {
+    border: 1px solid black;
+    padding: 5px;
+  }

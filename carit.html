@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+    <section class="top">
+    <head>
+        <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kennesaw State University</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap" rel="stylesheet">
+        <title>CARIT Application</title>
+        <script type="text/javascript">
+            function checkRadio(value) {
+                if (value == "Under Graduate") {
+                    document.getElementById('res').innerHTML = " ";
+                    document.getElementById("div2").style.display = "none";
+                    document.getElementById("div1").style.display = "block";
+                    document.getElementById("div3").style.display = "block";
+                    document.getElementById("div4").style.display = "none";
+                    document.getElementById('txtName').value = "";
+                    document.getElementById('CSE3203').value = "";
+                    document.getElementById('IT4213').value = "";
+                    document.getElementById('IT4323').value = "";
+                    document.getElementById('IT4403').value = "";
+    
+                } else if (value == "graduate") {
+                    document.getElementById('res').innerHTML = " ";
+                    document.getElementById("div1").style.display = "none";
+                    document.getElementById("div2").style.display = "block";
+                    document.getElementById("div3").style.display = "block";
+                    document.getElementById("div4").style.display = "none";
+                    document.getElementById('txtName').value = "";
+                    document.getElementById("IT7113").value = "";
+                    document.getElementById("IT6713").value = "";
+                    document.getElementById('IT6733').value = "";
+                    document.getElementById('IT6773').value = "";
+                }
+                else {
+                    document.getElementById('res').innerHTML = " ";
+                    document.getElementById("div1").style.display = "none";
+                    document.getElementById("div2").style.display = "none";
+                    document.getElementById("div3").style.display = "none";
+                    document.getElementById("div4").style.display = "none";
+                    document.getElementById('txtName').value = "";
+                    document.getElementById('CSE3203').value = "";
+                    document.getElementById('IT4213').value = "";
+                    document.getElementById('IT4323').value = "";
+                    document.getElementById('IT4403').value = "";
+                    document.getElementById("IT7113").value = "";
+                    document.getElementById("IT6713").value = "";
+                    document.getElementById('IT6733').value = "";
+                    document.getElementById('IT6773').value = "";
+                }
+            }
+    
+            function getGpa(x) {
+                var gpa;
+                if (x == "A") {
+                    gpa = 4;
+                }
+                else if (x == "B") {
+                    gpa = 3;
+                }
+                else if (x == "C") {
+                    gpa = 2;
+                }
+                else if (x == "D") {
+                    gpa = 1;
+                }
+                else if (x == "F") {
+                    gpa = 0;
+                }
+                else {
+                    gpa = 0;
+                }
+                return gpa;
+            }
+    
+            function evaluatecriteria() {
+                var radio1Checked = document.getElementById('radio1').checked;
+                var radio2Checked = document.getElementById('radio2').checked;
+                if (radio1Checked) {
+    
+                    var edit1 = document.getElementById('CSE3203').value;
+                    var edit2 = document.getElementById('IT4213').value;
+                    var edit3 = document.getElementById('IT4323').value;
+                    var edit4 = document.getElementById('IT4403').value;
+                    if (edit1 == "" || edit2 == "") {
+                        alert("Kindly enter the grades in required fields");
+                        return;
+                    }
+                    edit1 = edit1.toUpperCase();
+                    edit2 = edit2.toUpperCase();
+                    edit3 = edit3.toUpperCase();
+                    edit4 = edit4.toUpperCase();
+                    var sub1 = getGpa(edit1);
+                    var sub2 = getGpa(edit2);
+                    var sub3 = getGpa(edit3);
+                    var sub4 = getGpa(edit4);
+                    var avg = (sub1 + sub2 + sub3 + sub4) / 4;
+                    if (avg > 3.2) {
+                        document.getElementById('res').style.display = "block";
+                        document.getElementById('res').innerHTML = "Congratulations! Now you are eligible to apply for assistanships."
+                        document.getElementById('div4').style.display = "block";
+    
+                    }
+                    else {
+                        document.getElementById('res').style.display = "block";
+                        document.getElementById('res').innerHTML = "Sorry, you are not eligible for assistanships. Please apply next time."
+                        document.getElementById('div4').style.display = "block";
+    
+                    }
+                } else if (radio2Checked) {
+                    var edit5 = document.getElementById("IT7113").value;
+                    var edit6 = document.getElementById("IT6713").value;
+                    if (edit5 == "" || edit6 == "") {
+                        alert("Kindly enter the grades in required fields");
+                        return;
+                    }
+                    var edit7 = document.getElementById('IT6733').value;
+                    var edit8 = document.getElementById('IT6773').value;
+                    edit5 = edit5.toUpperCase();
+                    edit6 = edit6.toUpperCase();
+                    edit7 = edit7.toUpperCase();
+                    edit8 = edit8.toUpperCase();
+                    var sub1 = getGpa(edit5);
+                    var sub2 = getGpa(edit6);
+                    var sub3 = getGpa(edit7);
+                    var sub4 = getGpa(edit8);
+                    var avg = (sub1 + sub2 + sub3 + sub4) / 4;
+                    if (avg > 3.7) {
+                        document.getElementById('res').style.display = "block";
+                        document.getElementById('res').innerHTML = "Congratulations! Now you are eligible to apply for assistanships."
+                        document.getElementById('div4').style.display = "block";
+    
+                    }
+                    else {
+                        document.getElementById('res').style.display = "block";
+                        document.getElementById('res').innerHTML = "Sorry, you are not eligible for assistanships. Please apply next time."
+                        document.getElementById('div4').style.display = "block";
+    
+                    }
+                }
+            }
+        </script>
+    </head>
+    <section class = "carit">
+        <nav>
+            <a href="index.html"><img src="pictures/FindYourWingsLandscape.jpg"></a>
+            <div class="nav_links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="faculty.html">Faculty</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="carit.html">CARIT</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <h1 style="text-align:center; font-size:50px;"><b>Kennesaw State University Project</b>
+            <br>
+            <br>
+    
+            <div style="font-size:30px; margin-bottom: 10px;"><b>CARIT Summer Assistanship Application</b>
+        </h1>
+        <p style="font-size:15px">A Student Assistantship is a learning opportunity for all the students, 
+            which support professionalism in the context of the program, while also providing financial support. 
+            Kennesaw College is pleased to offer Student Assistanships at several levels and in different categories. 
+            Below is the information to guide you throught the process.</p>
+            <h1>
+                <div style="font-size:25px; margin-top: 10px; margin-bottom: 10px;"><b>Student Assistanship Application</b>
+            </h1>
+        <form name="profile">
+            <span class="FormLabel" style="font-size:20px"><b> Student Name</b>:</span>
+            <input type="text" style="font-size:2opx" name="Student Name" id="txtName" size="20" maxlength="20" />
+            <br>
+            <br>
+            <span class="FormLabel" style="font-size:20px"><b>Education level</b>:</span>
+    
+            <input type="radio" id="radio1" name="education" value="Under Graduate" onclick="checkRadio(value)" />
+            <label for="radio1" style="font-size:20px">Undergraduate</label>
+            <input type="radio" id="radio2" name="education" value="graduate" onclick="checkRadio(value)" />
+            <label for="radio2" style="font-size:20px">Graduate</label>
+            <input type="radio" id="radio3" name="education" value="None" checked="checked" onclick="checkRadio(value)" />
+            <label for="radio3" style="font-size:20px">None</label>
+            <br>
+            <div id="div1" style="display:none;">
+                <br>
+                <label style="font-size:20px">*CSE3203 Mobile System Overview</label>
+                <input type="text" style="font-size:20px" id="CSE3203" name="fname"><br>
+                <br>
+                <label style="font-size:20px">*IT4213 Mobile Web Development</label>
+                <input type="text" style="font-size:20px" id="IT4213" name="fname"><br>
+                <br>
+                <label style="font-size:20px">IT4323 Data Comm. & Networking</label>
+                <input type="text" style="font-size:20px" id="IT4323"><br>
+                <br>
+                <label style="font-size:20px">IT4403 Adv Web and Mobile App</label>
+                <input type="text" style="font-size:20px" id="IT4403" name="fname"><br>
+                <br>
+            </div>
+            <div id="div2" style="display:none;">
+                <br>
+                <label style="font-size:20px">*IT7113 Data Visualization</label>
+                <input type="text" id="IT7113" style="font-size:20px"><br><br>
+                <label style="font-size:20px">*IT6713 Business Intelligence</label>
+                <input type="text" id="IT6713" style="font-size:20px"><br><br>
+                <label style="font-size:20px">IT6733 Database Administration</label>
+                <input id="IT6733" style="font-size:20px" type="text"><br>
+                <br>
+                <label style="font-size:20px">IT6773 Practical Data Analytics</label>
+                <input type="text" style="font-size:20px" id="IT6773"><br>
+            </div>
+            <br><br>
+            <div id="div3" style="display:none;">
+                <input style="font-size:20px" type="button" value="Evaluate" onclick="evaluatecriteria()" /><br><br>
+    
+                <label id="res" style="font-size:25px" style="display:none;"></label>
+            </div>
+    
+            <div id="div4" style="display:none;">
+                <a style="font-size:25px" href="http://ccse.kennesaw.edu/it" target="_blank">Application Link</a>
+            </div>
+        </form>
+        <footer class="footer">
+            <p>This is a Class Project:<a href="http://it5443.azurewebsites.net/">http://it5443.azurewebsites.net/</a></p>
+        </footer>
+    </section>
+</section>
+</html>
